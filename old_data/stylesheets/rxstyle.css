@@ -1,0 +1,138 @@
+body{
+    width: 90%;
+    font-family: sans-serif;
+    margin-left: 9%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mainWrapper{
+    width: 100%;
+    height: auto;
+    /*    background-color: rebeccapurple;*/
+}
+.patientName{
+    font-family: sans-serif;
+    color: gray;
+    font-weight: normal;
+    font-size: 30px;
+
+}
+.patientGender{
+    margin-left: 2%;
+}
+.appointmentDate{
+    float: right;
+    color: gray;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 1px !important;
+}
+.patientAge ,.patientGender{
+    float: left;
+    color: gray;
+    font-weight: lighter;
+    font-size: 20px;
+}
+.patientID{
+    float: left;
+    color: gray;
+    margin-left: 6%;
+    font-weight: lighter;
+    font-size: 20px;
+}
+table {
+    border-collapse: collapse;
+}
+.block-5{
+    margin-bottom: 10%;
+}
+.frequency{
+    width: 30px;
+    text-align: center;
+}
+.tableHeading{
+}
+td, th {
+    border: 1px solid lightgray;
+}
+.block-1-1-1 p ,.block-1-2 , .Alergies , .AlergiesNote, .consultationNoteTitle,.consultationNoteValue,.complaintsValue,.Assessment,.History{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+.complaintsTitle{
+    margin-bottom: 0;
+    padding: 0;
+}
+.block-1,.block-2{
+    width: 100%;
+}
+.block-1-2 img{
+    float: right;
+}
+.block-1-1-1{
+    width: 50%;
+    float: left;
+    /*    background-color: red;*/
+}
+.block-1-1-2{
+    font-family: sans-serif;
+    color: gray;
+    font-weight: bold;
+    width: 27%;
+    float: right;
+    margin-top: 1%;
+    margin-left: 20%;
+}
+.block-3{
+    width: 100%;
+}
+.block-3 p{
+    font-family: sans-serif;
+    color: gray;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+    padding: 0;
+}
+/*
+.block-1-2 p{
+    float:right;
+    width: 28%;
+}*/
+
+hr{
+    float: left;
+    width: 100%;
+}
+
+hr{
+    border: 0;
+    height: 0;
+    color: lightgray;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.consultationNoteTitle {
+    font-family: sans-serif;
+    color: gray;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    padding: 0;
+}
+.complaintsTitle ,.History,.Assessment{
+    font-family: sans-serif;
+    color: gray;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+    padding: 0;
+}
+
+.block-2{
+    float: left;
+}

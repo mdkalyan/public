@@ -1,0 +1,324 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+
+.body{
+    width: 99%;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mainWrapper{
+    width: 100%;
+    height: auto;
+    /*    background-color: rebeccapurple;*/
+}
+.patientName{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: gray;
+    font-weight: normal;
+    font-size: 30px;
+
+}
+.vitalTable {
+    font-size: 11px;
+    width: 90%;
+    border-collapse: collapse;
+    text-transform: uppercase;
+
+}
+.rxTable{
+    margin-bottom: 10%;
+    border-collapse: collapse;
+    color: black !important;
+    font-size: 12px;
+}
+.rxTable td{
+    align-content: center;
+}
+.doctorSign{
+    background-color: red;
+    height: 200px;
+    width: 10%;
+    float: right;
+}
+.greyTextValue{
+    font-size:10px;
+    text-transform: uppercase;
+    margin-left:1%;
+    width: 200px;
+    float: left;
+    margin-bottom: 0;
+    padding-right: 1%;
+    margin-top: 0;
+}
+.greyColorText{
+    color:black;
+}
+footer{
+    float: right;
+    margin-bottom: 4%;
+    margin-right: 4%;
+    bottom: 0;
+    position: relative;
+}
+.AssessmentValue{
+    font-size: 10px;
+    color: rgb(74, 71, 71);
+    text-transform: normal;
+    margin-left:1%;
+
+}
+.categoryText{
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-left:1%;
+
+}
+.HistoryValue{
+    font-size: 10px;
+    color: rgb(74, 71, 71);
+    /* margin-bottom: 0;*/
+    margin-top: 0;
+    text-transform: normal;
+    margin-left:1%;
+}
+
+.patientGender{
+    margin-left: 2%;
+}
+.vitalTable td{
+    width: 50%;
+    height: 20px;
+
+}
+.appointmentDate{
+    float: right;
+    color: gray;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 1px !important;
+}
+.patientAge ,.patientGender{
+    float: left;
+    color: gray;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+
+.phoneImgClass{
+    float: left;
+    width: 18px;
+    margin-left: 6%;
+    margin-top: 5px;
+}
+
+.patientID ,.mobile{
+    float: left;
+    color: gray;
+    margin-left: 2%;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.subGroup{
+    margin-left: 2%;
+    font-size:   10px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    /*    color: gray; */
+    float: left;
+    font-weight: normal;
+    margin-top: 0;
+    /*    margin-bottom: 0;*/
+}
+
+.subGroupValue{
+    margin-left: 2%;
+    font-size:   10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(74, 71, 71);
+    font-weight: normal;
+    /*    margin-top: 0;*/
+
+}
+
+.block-5{
+    /*    margin-bottom: 5%;*/
+    float: left;
+    width: 60%;
+}
+.frequency{
+    width: 30px;
+    text-align: center;
+}
+
+.subTable td{
+    border:none;
+}
+.subValueTable{
+    width:100%;align:center;
+}
+.tableHeadingStyleValues{
+    font-weight: normal;
+    border:none;
+
+}
+.tableHeadingStyle{
+
+    font-weight: bold;
+}
+.tableHeading{
+    /*    width:100%;*/
+    align:center;
+    /*    font-weight: bold;*/
+}
+td, th {
+    border: 1px solid lightgray;
+}
+.complaintsValue{
+    font-size: 13px;
+    color: gray;
+
+}
+.block-1-1-1 p ,.block-1-2 , .Alergies , .AlergiesNote, .consultationNoteTitle,.consultationNoteValue,.Assessment,.History,.doctorName,.doctorQualification,.doctorSpecialisation{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.doctorSpecialisation,.doctorQualification{
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.doctorName{
+    font-size: 17px;
+    text-align: center;
+    font-weight: medium !important;
+}
+.complaintsValue,{
+    margin-top: 0;
+    padding: 0;
+}
+.rx{
+    font-size:   16px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    /*    color: gray; */
+    /*    margin-top: 9%;*/
+    font-weight: medium;
+    margin-bottom: 0;
+    margin-top: 0;
+
+}
+.complaintsTitle{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+    padding: 0;
+    margin-bottom: 1%;
+    font-size: 13px;
+    font-weight: medium !important; ;
+    text-transform: uppercase;
+}
+.vitals,.History,.Assessment{
+    margin-bottom: 0;
+    padding: 0;
+    margin-bottom: 1%;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.block-1,.block-2{
+    width: 100%;
+}
+.block-1-2 img{
+    float: right;
+}
+.block-1-1-1{
+    width: 50%;
+    float: left;
+    /*    background-color: red;*/
+}
+.block-1-1-2{
+    font-family: 'Source Sans Pro', sans-serif;
+    /*    color: gray; */
+    font-weight: medium;
+    width: 27%;
+    float: right;
+    margin-top: 1%;
+    margin-left: 20%;
+}
+.block-3{
+    width: 40%;
+    float: right;
+}
+.block-3 p{
+    font-family: 'Source Sans Pro', sans-serif;
+    /*    color: gray; */
+    font-weight: medium;
+    width: 90%;
+    float: right;
+    margin-top: 1%;
+    padding: 0;
+    font-size: 12px;
+}
+/*
+.block-1-2 p{
+    float:right;
+    width: 28%;
+}*/
+
+hr{
+    width: 100%;
+}
+
+hr{
+    border: 0;
+    height: 0;
+    color: lightgray;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.consultationNoteTitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: gray;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    padding: 0;
+}
+.History,.Assessment{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: medium;
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+    padding: 0;
+    text-transform: uppercase;
+}
+.block-6{
+    width: 100%;
+}
+.block-4{
+    float: left;
+    width: 60%;
+}
+.block-2{
+    float: right;
+}
+@page {
+    margin-left: 1in;
+    margin-right: 1in;
+    margin-top: 2in;
+    margin-bottom: 1in;
+}
+table.rxTable tr td, table.rxTable tr th {
+    page-break-inside: avoid !important;
+}
+

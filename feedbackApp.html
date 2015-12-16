@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Care Circle</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->   
+     <div class="container">
+         <div class="row">
+         <div id="feedback_container">
+ 		<div id="feedback_results_container">
+
+
+		</div>
+		</div>
+
+         </div>
+     </div>
+     
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
+   <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+			google.load('visualization', '1.0', {'packages':['corechart']});
+		</script>
+    
+     <script>
+var orgId = getQueryVariable("orgId");
+
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  } 
+  alert('Query Variable ' + variable + ' not found');
+}
+     $(document).ready(function(){$.ajax({
+        type: "GET",
+        headers: {
+            'Accept':'application/vnd.teehalf.erx-v1+json',
+            'X-ERX-Authentication':'42</B7Tg8o5C7`7<7Ar0?]pJs`@Noplt>I1m>QYQn[v=osDl:unWyx`SYqBK@0?w',
+            'Content-Type':'application/json'
+        },
+        dataType: "json",
+        url: "../feedback/results/" + orgId + "",
+         success: function(data) {     
+         var feedbackhtml = "";
+
+            $.each(data.data, function(index3,value3) {
+
+                    if(value3.feedBackQuestionDTO.fieldType.id == 6) {//star
+                        feedbackhtml += '<div class="col-sm-3" id=' + value3.feedBackQuestionDTO.id + '></div>';
+                    }else{
+                        feedbackhtml += '<div id=' + value3.feedBackQuestionDTO.id + '></div>';
+                    }
+
+            });
+
+            $("#feedback_results_container").html(feedbackhtml);
+
+
+            $.each(data.data, function(index3,value3) {
+
+
+                var col = ["#ff0000","ff6e6e","fff4b3","88fb6e","2fff00"];
+
+                if(value3.feedBackQuestionDTO.fieldType.id == 6) {//star
+                    var array = [
+                        ["number", "votes", {role: "style"}]
+                    ];
+                    $.each(value3.starRatings, function(index4,value4) {
+                        array.push([index4,value4,col[index4]]);
+                    });
+                    var data = google.visualization.arrayToDataTable(array);
+
+                    var view = new google.visualization.DataView(data);
+                    view.setColumns([0, 1,
+                        {
+                            calc: "stringify",
+                            sourceColumn: 1,
+                            type: "string",
+                            role: "annotation"
+                        },
+                        2]);
+
+                    var options = {
+                        title: value3.feedBackQuestionDTO.question,
+                        width: "100%",
+                        height: 250,
+                        bar: {groupWidth: "95%"},
+                        legend: {position: "none"},
+                    };
+                    var chart = new google.visualization.BarChart(document.getElementById(value3.feedBackQuestionDTO.id));
+                    chart.draw(view, options);
+                }else{
+                    var freeText = '<div class=" col-sm-6 col-xs-12">';
+                    freeText += '<h4>'+ value3.feedBackQuestionDTO.question +'</h4>';
+                    $.each(value3.freeText, function(index4,value4) {
+                        freeText += '<p>'+ value4.value +'</p>';
+                    });
+                    freeText +='</div>';
+                    document.getElementById(value3.feedBackQuestionDTO.id).innerHTML =freeText;
+                }
+
+            });
+
+            $("#feedback_container").show();
+         },
+        error: function () {
+            alert("failure");
+        }
+         });
+    });
+    </script>
+</body>
+</html>

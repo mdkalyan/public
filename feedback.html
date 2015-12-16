@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="feedbackApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Care Circle</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+ <div ng-controller="feedbackCtrl">    
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" style="font-size: 20px !Important;" href="#">Care Circle</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a href="javascript:deletecook();">Hello, Click Here</a>
+              </li>
+            </ul>
+                    
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="jumbotron" style="padding-top: 0px; padding-bottom: 10px;margin-top:50px;">
+       <div class="container">
+        <center><h3><span ng-bind="selc"></span> Dashboard</h3></center>
+        </div>       
+    </div>
+     <div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-xs-6">
+        <select class="form-control"  ng-model="selc">
+            <option value="">Select Organization</option>
+            <option value="{{x}}" ng-repeat="x in branchName track by $index">{{x}}</option>
+        </select>
+         </div>
+         </div>
+     
+         <div class="row">
+         <div id="feedback_container">
+ 		<div id="feedback_results_container">
+
+
+		</div>
+		</div>
+
+         </div>
+     </div>
+     
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
+    <!--Angular -->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="js/getFeedback.js"></script>
+    <!--<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        function deletecook() {
+       var d = new Date();
+       document.cookie = "loginStatus=true;expires=" + d.toGMTString() + ";" + ";";
+       window.location.href="../index.html";
+     }
+    </script> 
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+			google.load('visualization', '1.0', {'packages':['corechart']});
+		</script>
+</body>
+</html>
